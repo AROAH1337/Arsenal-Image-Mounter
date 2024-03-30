@@ -13,7 +13,9 @@ jobs:
       - name: where
         run: pwd
       - name: wwww
-        run: ls
+        run: ls D:\a\Arsenal-Image-Mounter\Arsenal-Image-Mounter
+      - name: ufgty
+        run: ls D:\a\Arsenal-Image-Mounter
       - name: Build
         uses: EasyDesk/action-dotnet-build@v1.0.4
         with:
