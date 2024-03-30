@@ -10,6 +10,8 @@ jobs:
   buildo:
     runs-on: windows-latest
     steps:
+      - name: where
+        run: pwd && ls
       - name: Build
         uses: EasyDesk/action-dotnet-build@v1.0.4
         with:
