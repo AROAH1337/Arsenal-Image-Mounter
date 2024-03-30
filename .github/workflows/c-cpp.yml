@@ -11,7 +11,9 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: where
-        run: pwd && ls
+        run: pwd
+      - name: wwww
+        run: ls
       - name: Build
         uses: EasyDesk/action-dotnet-build@v1.0.4
         with:
