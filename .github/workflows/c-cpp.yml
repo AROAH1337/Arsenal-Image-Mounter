@@ -1,0 +1,28 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  buildo:
+    runs-on: windows-latest
+    steps:
+      - name: Build
+        uses: EasyDesk/action-dotnet-build@v1.0.4
+        with:
+          # (Optional) Additional arguments for dotnet build.
+          build-args: -v normal
+
+          # (Optional) Build configuration, defaults to 'Release'.
+          # If the version starts with the 'v' prefix, it will be removed to conform to the requirements of dotnet pack.
+          build-configuration: Release
+
+          # (Optional) The path of the project to build; if omitted, the whole solution is built.
+          path: Managed\ Source/ArsenalImageMounter.sln
+          
+          # (Optional) True if warnings should be treated as errors, defaults to false.
+          warnings-as-errors: true  # optional, default is .
+          
